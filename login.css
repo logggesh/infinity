@@ -45,7 +45,7 @@ body{
     border-radius: 20px !important;
     border: solid 3px #66CAE7 !important;
 }
-@media screen and (max-width){
+@media screen and (min-width){
     .back{
         margin-left: 30px !important;
     }
