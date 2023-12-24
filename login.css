@@ -45,8 +45,22 @@ body{
     border-radius: 20px !important;
     border: solid 3px #66CAE7 !important;
 }
-@media screen and (min-width){
+@media screen and (min-width:320px) and (max-width:450px){
     .back{
-        margin-left: 30px !important;
+        margin-top: 20px !important;
+       height: 460px !important;
+       width: 300px !important;
+       margin-left: -17px !important;
+    }
+    .bulb{
+        position: absolute;
+        left: 170px !important;
+        top: -115px !important;
+        z-index: -1;
+    }
+    .nucleus{
+        position: absolute;
+        top: 53px !important;
+        left: 156px !important;
     }
 }
