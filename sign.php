@@ -20,7 +20,7 @@
             <div class="row">
               <div class="col-lg-12 h4 text-center  mt-4"><span class="regis-txt">REGISTRATION</span></div>
 
-              <div class="col-lg-6  d-flex justify-content-center mt-4">
+              <div class="col-lg-6  d-flex justify-content-center mt-5">
                 <div class="name-input">
                   <input type="text" id="studentName" class="name-in" name="studentName" required>
                   <label class="name-lbl">Student Name</label>
@@ -28,7 +28,7 @@
               </div>
 
 
-              <div class="col-lg-6 d-flex justify-content-center mt-4">
+              <div class="col-lg-6 d-flex justify-content-center mt-5">
                 <div class="name-input">
                   <input type="text" id="rollNumber" class="name-in" name="rollNumber" required>
                   <label class="name-lbl">Roll Number</label>
