@@ -1,0 +1,178 @@
+.infinity-logo-side{
+    height: 600px !important;
+    width: 450px !important;
+    background-color: black !important;
+
+    border-right: solid 1px white !important;
+}
+.right-container{
+    height: 600px !important;
+    width: 900px !important;
+    background-color: black;
+    position: relative;
+}
+.name-input{
+    position: relative;
+}
+body{
+    background-image: url('logo/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.regis-txt{
+    color: #36cffa;
+}
+.name-in{
+    width: 300px !important;
+    height: 30px !important;
+    color: white;
+    border: 3px solid #36cffa;
+    background: none;
+    outline: none;
+    letter-spacing: 2px !important;
+}
+.name-lbl{
+    position: absolute;
+    color: aliceblue;
+    left: 10px !important;
+    letter-spacing: 1px !important;
+    background-color: transparent; /* Set background to transparent */
+    pointer-events: none;
+}
+.option-in{
+    width: 300px !important;
+    height: 30px !important;
+    color: white;
+    border: 3px solid #36cffa;
+    background: none;
+    outline: none;
+    letter-spacing: 2px !important;
+    background-color: black;
+    color: #ffffff;
+}
+.study-option{
+    width: 180px !important;
+    height: 30px !important;
+    color: white;
+    border: 3px solid #36cffa;
+    background: none;
+    outline: none;
+    letter-spacing: 2px !important;
+    background-color: black;
+    color: #ffffff;
+}
+.submit-btn{
+    color: white;
+    border: 3px solid #36cffa;
+    background: none;
+    outline: none;
+    letter-spacing: 2px !important;
+    background-color: black;
+    color: #ffffff;
+    width: 180px !important;
+    height: 40px !important;
+}
+.name-in:focus,
+.name-in:valid,.option-in:focus{
+    outline: none;
+    --angle: 0;
+    border: 3px solid #36cffa;
+    border-image: conic-gradient(from var(--angle), #36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff) 1;
+    animation: rotatecolor 3s linear infinite;
+}
+.submit-btn:hover{
+    outline: none;
+    --angle: 0;
+    border: 3px solid #36cffa;
+    border-image: conic-gradient(from var(--angle), #36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff) 1;
+    animation: rotatecolor 3s linear infinite;
+    background-color: #36cffa;
+    transition: 0.5s ease;
+}
+@keyframes rotatecolor {
+    to{
+        --angle: 360deg;
+    }
+}
+@property --angle{
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits:false;
+}
+input:focus ~ label,input:valid ~ label{
+    position: absolute;
+    left: 0;
+    transform: translateY(-0.9rem) !important;
+    padding-left: 5px !important;
+    transition: 0.5s ease;
+    font-size: 15px !important;
+    background-color: black;   
+}
+@media screen and (min-width: 425px) and (max-width: 992px) {
+    .infinity-logo-side {
+        height: 300px !important;
+        width: 450px !important;
+        border-bottom: solid 1px #ffffff;
+        background-color: black !important;
+        border-right: solid 1px white !important;
+        background: transparent !important;
+
+    }
+    .right-container{
+        background: transparent !important;
+        width: 450px !important;
+        height: 900px !important;
+    }
+    body{
+        background-image: url('logo/background.jpg');
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+    }
+}
+@media screen and (min-width: 200px) and (max-width: 425px) {
+    .infinity-logo-side {
+        height: 200px !important;
+        width: 300px !important;
+        border-bottom: solid 1px #ffffff;
+        background-color: black !important;
+        border-right: solid 1px white !important;
+
+    }
+    .right-container{
+        background: transparent !important;
+        width: 250px !important;
+        height: 900px !important;
+    }
+    body{
+        background-image: url('logo/background.jpg');
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+    }
+}
+@media screen and (min-width: 200px) and (max-width: 320px) {
+    .infinity-logo-side {
+        height: 200px !important;
+        width: 300px !important;
+        border-bottom: solid 1px #ffffff;
+        background-color: black !important;
+        border-right: solid 1px white !important;
+
+    }
+    .right-container{
+        margin-left: 25px !important;
+        background: transparent !important;
+        width: 250px !important;
+        height: 900px !important;
+    }
+    body{
+        background-image: url('logo/background.jpg');
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+    }
+}
+
+
