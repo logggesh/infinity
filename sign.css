@@ -113,12 +113,8 @@ input:focus ~ label,input:valid ~ label{
     .infinity-logo-side {
         height: 300px !important;
         width: 450px !important;
-        border-bottom: solid 1px #ffffff;
-        border-right: solid 1px white !important;
-        background-image:url('logo/infinity_logo_cropped.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover; 
+        background: transparent !important;
+        border-right: none !important;
 
     }
     .right-container{
@@ -137,12 +133,8 @@ input:focus ~ label,input:valid ~ label{
     .infinity-logo-side {
         height: 200px !important;
         width: 300px !important;
-        border-bottom: solid 1px #ffffff;
-        background-image:url('logo/infinity_logo_cropped.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover; 
-        border-right: solid 1px white !important;
+        background: transparent !important;
+        border-right: none !important;
 
     }
     .right-container{
@@ -161,16 +153,11 @@ input:focus ~ label,input:valid ~ label{
     .infinity-logo-side {
         height: 200px !important;
         width: 300px !important;
-        border-bottom: solid 1px #ffffff;
-        background-image:url('logo/infinity_logo_cropped.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover; 
-        border-right: solid 1px white !important;
-
+        background: transparent !important;
+        border-right: none !important;
     }
     .right-container{
-        margin-left: 25px !important;
+        margin-left: 4px !important;
         background: transparent !important;
         width: 250px !important;
         height: 900px !important;
