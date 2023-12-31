@@ -18,7 +18,7 @@
         <div class="col-lg-8 col-md-12 right-holder d-flex justify-content-center align-items-center p-0">
           <div class="right-container">
             <div class="row">
-              <div class="col-lg-12 h4 text-center  mt-4"><span class="regis-txt">REGISTRATION</span></div>
+              <div class="col-lg-12 h4 text-center"><span class="regis-txt">REGISTRATION</span></div>
 
               <div class="col-lg-6  d-flex justify-content-center mt-5">
                 <div class="name-input">
