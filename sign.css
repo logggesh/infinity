@@ -25,8 +25,9 @@ body{
 }
 .name-in{
     width: 300px !important;
-    height: 30px !important;
+    height: 35px !important;
     color: white;
+    
     border: 3px solid #36cffa;
     background: none;
     outline: none;
@@ -36,8 +37,9 @@ body{
     position: absolute;
     color: aliceblue;
     left: 10px !important;
-    letter-spacing: 1px !important;
-    background-color: transparent; /* Set background to transparent */
+    top: 4.5px !important;
+    letter-spacing: 2px !important;
+    background-color: transparent;
     pointer-events: none;
 }
 .option-in{
@@ -78,12 +80,15 @@ body{
     outline: none;
     --angle: 0;
     border: 3px solid #36cffa;
+    border-radius: 15px !important;
+    transition: border-radius 2s ease !important;
     border-image: conic-gradient(from var(--angle), #36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff) 1;
     animation: rotatecolor 3s linear infinite;
 }
 .submit-btn:hover{
     outline: none;
     --angle: 0;
+
     border: 3px solid #36cffa;
     border-image: conic-gradient(from var(--angle), #36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff) 1;
     animation: rotatecolor 3s linear infinite;
@@ -105,6 +110,7 @@ input:focus ~ label,input:valid ~ label{
     left: 0;
     transform: translateY(-0.9rem) !important;
     padding-left: 5px !important;
+    transition: 2s ease;
     transition: 0.5s ease;
     font-size: 15px !important;
     background-color: black;   
