@@ -70,7 +70,7 @@ body{
     background: none;
     outline: none;
     letter-spacing: 2px !important;
-    background-color: black;
+    background-color: transparent;
     color: #ffffff;
     width: 180px !important;
     height: 40px !important;
