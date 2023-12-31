@@ -19,8 +19,8 @@
           <div class="right-container">
             <div class="row">
               <div class="col-lg-12 h4 text-center  mt-4"><span class="regis-txt">REGISTRATION</span></div>
-              <form method="POST">
               <div class="col-lg-6  d-flex justify-content-center mt-5">
+                <form method="POST">
                 <div class="name-input">
                   <input type="text" id="studentName" class="name-in" name="studentName" required>
                   <label class="name-lbl">Student Name</label>
@@ -131,7 +131,7 @@
                 <div class="col-lg-12 mt-5 d-flex justify-content-center">
                   <button class="submit-btn">Register</button>
                 </div>
-              </form>
+                </form>
             </div>
           </div>
         </div>
