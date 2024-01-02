@@ -2,7 +2,6 @@
     height: 600px !important;
     width: 450px !important;
     background-color: black !important;
-
     border-right: solid 1px white !important;
 }
 .right-container{
@@ -50,8 +49,10 @@ body{
     background: none;
     outline: none;
     letter-spacing: 2px !important;
-    background-color: black;
     color: #ffffff;
+}
+option{
+    background-color: black;
 }
 .study-option{
     width: 180px !important;
