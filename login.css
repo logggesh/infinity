@@ -8,10 +8,13 @@
     animation: revolve 4s linear infinite;
     z-index: -1;
 }
+body{
+    background: linear-gradient(to right,#005067,#b2b2b2,#00667b);
+}
 .login-txt{
     text-align: center;
     margin-top: 60px !important;
-    color: #66CAE7;
+    color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     font-size: 40px !important;  
 }

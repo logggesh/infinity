@@ -14,13 +14,10 @@
     position: relative;
 }
 body{
-    background-image: url('logo/background.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(to bottom,#07051d,#0d7d89,#c47741);
 }
 .regis-txt{
-    color: #36cffa;
+    color: white;
 }
 .name-in{
     width: 300px !important;
