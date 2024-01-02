@@ -127,10 +127,7 @@ input:focus ~ label,input:valid ~ label{
         height: 900px !important;
     }
     body{
-        background-image: url('logo/background.jpg');
-        background-position: center;
-        background-repeat: repeat;
-        background-size: cover;
+        background: linear-gradient(to bottom,#07051d,#0d7d89,#c47741);
     }
 }
 @media screen and (min-width: 200px) and (max-width: 425px) {
@@ -147,10 +144,7 @@ input:focus ~ label,input:valid ~ label{
         height: 900px !important;
     }
     body{
-        background-image: url('logo/background.jpg');
-        background-position: center;
-        background-repeat: repeat;
-        background-size: cover;
+        background: linear-gradient(to bottom,#07051d,#0d7d89,#c47741);
     }
 }
 @media screen and (min-width: 200px) and (max-width: 320px) {
@@ -167,10 +161,7 @@ input:focus ~ label,input:valid ~ label{
         height: 900px !important;
     }
     body{
-        background-image: url('logo/background.jpg');
-        background-position: center;
-        background-repeat: repeat;
-        background-size: cover;
+        background: linear-gradient(to bottom,#07051d,#0d7d89,#c47741);
     }
 }
 
