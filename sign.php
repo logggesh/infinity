@@ -18,7 +18,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
-<body style="background: linear-gradient(to bottom,#07051d,#0d7d89,#c47741);">
+<body>
     <div class="container-fluid d-flex justify-content-center align-items-center" style="height:100vh">
       <div class="row d-flex justify-content-center align-items-center" style="height:100vh">
         <div class="col-lg-4 col-md-12 left-container d-flex justify-content-center align-items-center p-0">

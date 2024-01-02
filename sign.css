@@ -14,7 +14,10 @@
     position: relative;
 }
 body{
-    background: linear-gradient(to bottom,#07051d,#0d7d89,#c47741);
+    background-image: url('logo/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .regis-txt{
     color: white;
@@ -24,7 +27,7 @@ body{
     height: 40px !important;
     color: white;
     
-    border: 3px solid #36cffa;
+    border: 3px solid whit;
     background: none;
     outline: none;
     letter-spacing: 2px !important;
@@ -42,7 +45,6 @@ body{
     width: 300px !important;
     height: 35px !important;
     color: white;
-    border: 3px solid #36cffa;
     background: none;
     outline: none;
     letter-spacing: 2px !important;
@@ -64,7 +66,6 @@ option{
 }
 .submit-btn{
     color: white;
-    border: 3px solid #36cffa;
     background: none;
     outline: none;
     letter-spacing: 2px !important;
@@ -80,17 +81,16 @@ option{
     border: 3px solid #36cffa;
     border-radius: 15px !important;
     transition: border-radius 2s ease !important;
-    border-image: conic-gradient(from var(--angle), #36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff) 1;
-    animation: rotatecolor 3s linear infinite;
+    border-image: conic-gradient(from var(--angle), rgb(197, 169, 15), black,rgb(197, 169, 15), black,rgb(197, 169, 15), black,rgb(197, 169, 15), black,rgb(197, 169, 15), black,rgb(197, 169, 15), black) 1;
+    animation: rotatecolor 7s linear infinite;
 }
 .submit-btn:hover{
     outline: none;
     --angle: 0;
 
-    border: 3px solid #36cffa;
-    border-image: conic-gradient(from var(--angle), #36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff,#36cffa, #ffffff) 1;
-    animation: rotatecolor 3s linear infinite;
-    background-color: #36cffa;
+    border: 3px solid rgb(197, 169, 15);
+    border-image: conic-gradient(from var(--angle), rgb(197, 169, 15), black,rgb(197, 169, 15), black,rgb(197, 169, 15), black,rgb(197, 169, 15), black,rgb(197, 169, 15), black,rgb(197, 169, 15), black) 1;
+    animation: rotatecolor 7s linear infinite;
     transition: 0.5s ease;
 }
 @keyframes rotatecolor {
@@ -127,7 +127,10 @@ input:focus ~ label,input:valid ~ label{
         height: 900px !important;
     }
     body{
-        background: linear-gradient(to bottom,#07051d,#0d7d89,#c47741);
+        background-image: url('logo/background.jpg');
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
     }
 }
 @media screen and (min-width: 200px) and (max-width: 425px) {
@@ -144,7 +147,10 @@ input:focus ~ label,input:valid ~ label{
         height: 900px !important;
     }
     body{
-        background: linear-gradient(to bottom,#07051d,#0d7d89,#c47741);
+        background-image: url('logo/background.jpg');
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
     }
 }
 @media screen and (min-width: 200px) and (max-width: 320px) {
@@ -161,7 +167,10 @@ input:focus ~ label,input:valid ~ label{
         height: 900px !important;
     }
     body{
-        background: linear-gradient(to bottom,#07051d,#0d7d89,#c47741);
+        background-image: url('logo/background.jpg');
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
     }
 }
 
