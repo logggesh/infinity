@@ -1,0 +1,24 @@
+.otp-back{
+    height: 200px !important;
+    width: 400px !important;
+    background-color: #36cffa;
+    border-radius: 20px !important;
+}
+input{
+    height: 50px !important;
+    width: 50px !important;
+    text-align: center;
+    border: 2px solid #6FADDE !important;
+}
+input::-webkit-inner-spin-button,::-webkit-outer-spin-button{
+    display: none;
+}
+.submit-but{
+    height: 35px !important;
+    width: 150px !important;
+    background-color: #6FADDE !important;
+}
+.submit-but:hover{
+    background-color: #2c6c9e !important;
+    transition: 0.3s ease-in !important;
+}
