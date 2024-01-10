@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+nav{
+    background-color: black;
+}
+.abt-us-cont{
+    opacity: 0;
+}
+.abt-us-cont-disp{
+    opacity: 1;
+    height: 500px !important;
+    width: 1200px !important;
+    background-color: black;
+    border-radius: 15px !important;
+    animation: back-drop 0.9s ease-in;
+}
+.anim-disp{
+    height: 500px !important;
+    width: 500px !important;
+}
+.content{
+    opacity: 0;
+}
+.content_display{
+    opacity: 1;
+    font-family: ubuntu;
+    font-size: 16.5px;
+    text-align: center;
+    color: white;
+    padding: 20px 20px;
+    animation: transition-content 0.9s ease-in;
+}
+.heading-color{
+    color: #047cff;
+    text-align: center;
+}
+.sponsers-div{
+    height: 500px !important;
+    width: 100% !important;
+    background-color: aqua;
+    margin-top: 50px !important;
+}
+@media screen and (min-width: 200px) and (max-width: 439px) {
+    .psg{
+        font-size: 10px !important;
+    }
+    .abt-us-cont{
+        height: 780px !important;
+    }
+    .content{
+        font-family: ubuntu;
+        font-size: 12px;
+        text-align: center;
+        color: white;
+        padding: 20px 20px;
+    }
+    .anim-disp{
+        margin-top: 50px !important;
+        margin-right: 25px !important;
+        justify-content: center !important;
+        align-items: center !important;
+        display: flex !important;
+        height: 300px !important;
+        width: 300px !important;
+    }
+}
+@media screen and (min-width: 445px) and (max-width: 988px) {
+    .psg{
+        font-size: 10px !important;
+    }
+    .abt-us-cont{
+        height: 700px !important;
+    }
+    .anim-disp{
+        margin-top: 50px !important;
+        margin-right: 25px !important;
+        justify-content: center !important;
+        align-items: center !important;
+        display: flex !important;
+        height: 300px !important;
+        width: 300px !important;
+    }
+    .content{
+        font-family: ubuntu;
+        font-size: 12px;
+        text-align: center;
+        color: white;
+        padding: 20px 20px;
+    }
+}
+@keyframes transition-content {
+    0%{
+        opacity: 0;
+    }    
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes back-drop{
+    0%{
+        opacity: 0;
+    }    
+    100%{
+        opacity: 1;
+    }
+}

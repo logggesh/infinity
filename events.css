@@ -5,7 +5,7 @@ body{
     background-size: cover;
     height: 100vh;
 }
-.prozone-back{
+.ideathrone-back{
     background-image: url('logo/2.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -13,8 +13,23 @@ body{
     height:250px !important;
     width: 200px !important;
 }
-.prozone-back:hover{
-    box-shadow: 10px 10px 10px 10px white,10px 10px 10px 10px white,10px 10px 10px 10px white,10px 10px 10px 10px white,10px 10px 10px 10px white
-    ,10px 10px 10px 10px white,10px 10px 10px 10px white,10px 10px 10px 10px white;
-    transform: scale(2,0,0,2,0,0);
+.gamoholix-back{
+    background-image: url('logo/6.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:250px !important;
+    width: 200px !important;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.mindmuse-back{
+    background-image: url('logo/3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:250px !important;
+    width: 200px !important;
+}
+.row{
+    margin-left: 150px !important;
 }

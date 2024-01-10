@@ -10,10 +10,10 @@ nav{
 }
 .content{
     font-family: ubuntu;
-    font-size: 18px;
+    font-size: 16.5px;
     text-align: center;
     color: white;
-    
+    padding: 20px 20px;
 }
 .content:hover{
     animation: transition-content 1s ease-in;

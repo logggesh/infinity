@@ -10,9 +10,19 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
-                <div class="prozone-back">
-                    <h4>FEB 04</h4>
+            <div class="col-lg-4">
+                <div class="ideathrone-back">
+                    
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="gamoholix-back">
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="mindmuse-back">
+
                 </div>
             </div>
         </div>
