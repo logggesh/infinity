@@ -42,6 +42,7 @@ nav{
     background-color: aqua;
     margin-top: 50px !important;
 }
+
 @media screen and (min-width: 200px) and (max-width: 439px) {
     .psg{
         font-size: 10px !important;
