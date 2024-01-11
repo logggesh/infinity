@@ -46,10 +46,10 @@
 </nav>
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 mt-5">
+            <div class="col-lg-12 col-sm-12 mt-5 ">
                 <h4 class="text-center text-white">TECHNICAL EVENTS</h4>
             </div>
-            <div class="col-lg-3 mt-5">
+            <div class="col-lg-3 col-sm-12 mt-5 d-flex justify-content-center">
                 <div class="tech-back">
                     <div class="front">
                         <h4 class="text-white text-center mt-3">TECH RUSH</h4>
@@ -63,8 +63,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 mt-5">
-                <div class="incognito-back">
+            <div class="col-lg-3 col-sm-12 mt-5 d-flex justify-content-center">
+                <div class="incognito-back ">
                     <div class="front1">
                         <h4 class="text-white text-center mt-3">INCOGNITO</h4>
                     </div>
@@ -77,13 +77,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 mt-5">
+            <div class="col-lg-3 col-sm-12 mt-5 d-flex justify-content-center">
                 <div class="technofuzzle-back">
                     <div class="front2">
                     <h4 class="text-white text-center mt-3">TECHNOFUZZLE</h4>
                     </div>
                     <div class="back2">
-                    <div class="d-flex justify-content-center align-items-center mt-5">
+                        <div class="d-flex justify-content-center align-items-center mt-5">
                             <img src="photos/Event_Logos/technofuzzle.png" alt="">
                         </div>
                         <h4 class="text-center text-white mt-4">TECHNO FUZZLE</h4>
@@ -91,7 +91,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 mt-5">
+            <div class="col-lg-3 col-sm-12 mt-5 d-flex justify-content-center">
                 <div class="ideathrone-back">
                     <div class="front3">
                         <h4 class="text-white text-center mt-3">IDEATHRONE</h4>
@@ -107,7 +107,7 @@
             </div>
             <div class="h4 text-center text-white mt-5">NON-TECHNICAL EVENTS</div>
 
-            <div class="col-lg-4 mt-5 ">
+            <div class="col-lg-4 col-sm-12 mt-5 d-flex justify-content-center">
                 <div class="gamoholix-back">
                     <div class="front4">
 
@@ -122,7 +122,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 mt-5">
+            <div class="col-lg-4 col-sm-12 mt-5 d-flex justify-content-center">
                 <div class="graphiculture-back">
                     <div class="front5">
                     <h4 class="text-white text-center mt-3">GRAPHICULTURE</h4>
@@ -137,7 +137,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 mt-5">
+            <div class="col-lg-4 col-sm-12 mt-5 d-flex justify-content-center">
                 <div class="mindmuse-back">
                     <div class="front6">
                         <h4 class="text-white text-center mt-3">MIND MUSE</h4>
@@ -156,7 +156,7 @@
                     FLAGSHIP EVENTS
                 </div>
             
-            <div class="col-lg-12 mt-5  d-flex justify-content-center">
+            <div class="col-lg-12 mt-5 col-sm-12 d-flex justify-content-center">
                 <div class="prozone-back">
                     <div class="front7">
                         <h4 class="text-white text-center mt-3">PROZONE</h4>
