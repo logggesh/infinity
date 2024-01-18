@@ -10,20 +10,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up</title>
-  <link rel="stylesheet" href="sign.css">
+  <title>Onspot Form</title>
+  <link rel="stylesheet" href="onspot_form.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" ></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" ></script>
 </head>
 <body>
     <div class="container-fluid d-flex justify-content-center align-items-center" style="height:100vh">
       <div class="row d-flex justify-content-center align-items-center" style="height:100vh">
         <div class="col-lg-4 col-md-12 left-container d-flex justify-content-center align-items-center p-0">
           <div class="infinity-logo-side d-flex justify-content-center align-items-center">
-            <img src="logo/infinity_logo.png" height="300px" width="300px" alt="">
+            <img src="photos/logo/infinity_logo.png" height="300px" width="300px" alt="">
           </div>
         </div>
         <div class="col-lg-8 col-md-12 right-holder d-flex justify-content-center align-items-center p-0">
@@ -61,19 +62,6 @@
                 </div>
               </div>
               
-              <div class="col-lg-6 d-flex justify-content-center mt-5">
-                <div class="name-input">
-                  <input type="password" class="name-in" id="password" name="password" required>
-                  <label class="name-lbl">Password</label>
-                </div>
-              </div>
-
-              <div class="col-lg-6 d-flex justify-content-center mt-5">
-                <div class="name-input">
-                  <input type="password" class="name-in" id="confirmPassword" name="confirmPassword" required>
-                  <label class="name-lbl">Confirm Password</label>
-                </div>
-              </div>
 
               <div class="col-lg-6 d-flex justify-content-center mt-5">
                 <div class="name-input">
@@ -136,14 +124,10 @@
     
     $studentName = $_POST['studentName'];
     $rollNumber = $_POST['rollNumber'];
-    $degree = $_POST['degree'];
     $stream = $_POST['stream'];
     $email = $_POST['email'];
     $contactNumber = $_POST['contactNumber'];
-    $password_form = $_POST['password'];
-    $confirmPassword = $_POST['confirmPassword'];
     $yearOfStudy = $_POST['yearOfStudy'];
-    $gender = $_POST['gender'];
     
     $servername = "db-main.czqededjccqk.ap-south-1.rds.amazonaws.com";
     $username = "admin";
@@ -213,27 +197,6 @@
       $check++;
   }
 
-  if($password_form!=$confirmPassword){
-    echo "$password_form<br>";
-    echo $confirmPassword;
-    echo "<script>
-          swal({
-            text:'Password doesn\'t Match',
-            title:'error',
-            icon:'error',
-            buttons:{
-              confirm:'Ok'
-            },
-            dangerMode:true,
-          }).then((willClose)=>{
-            if(willClose){
-              swal.close(); 
-            }
-          });
-  </script>";
-      $check++;
-  }
-
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       echo "<script>
           swal({
@@ -274,43 +237,6 @@
       $check++;
   }
 
-  if($gender=="gender"){
-    echo "<script>
-          swal({
-            text:'Select Gender',
-            title:'ERROR',
-            icon:'error',
-            buttons:{
-              confirm:'Ok'
-            },
-            dangerMode:true,
-          }).then((willClose)=>{
-            if(willClose){
-              swal.close(); 
-            }
-          });
-    </script>";
-      $check++;
-  }
-
-  if($degree=="degree"){
-    echo "<script>
-          swal({
-            text:'Select Degree',
-            title:'ERROR',
-            icon:'error',
-            buttons:{
-              confirm:'Ok'
-            },
-            dangerMode:true,
-          }).then((willClose)=>{
-            if(willClose){
-              swal.close(); 
-            }
-          });
-    </script>";
-      $check++;
-  }
 
     if($yearOfStudy=="yos"){
       echo "<script>
@@ -347,73 +273,73 @@
             }
           });
     </script>";
+    $check++;
     }
     if($check==0){
+      $student_id_gen=rand(10,90);
+      $student_id_fin=$rollNumber.'_'.$student_id_gen;
+      echo $student_id_fin;
       $trigger=1;
-
-      $_SESSION['studentName']=$studentName;
-      $_SESSION['rollnumber']=$rollNumber;
-      $_SESSION['degree']=$degree;
-      $_SESSION['stream']=$stream;
-      $_SESSION['email']=$email;
-      $_SESSION['contact_num']=$contactNumber;
-      $_SESSION['password']=$password_form;
-      $_SESSION['yos']=$yearOfStudy;
-      $_SESSION['gender']=$gender;
+      $query="insert into students values('$student_id_fin','$studentName','$rollNumber','$stream','$email','$contactNumber','null','$yearOfStudy');";
+      $query_run=mysqli_query($conn,$query);
+      echo $query_run;
+      if($query_run){
+        echo '<script>alert("data inserted")</script>';
+      }
     }
+
   }
   ?>
 <script>
-  let trigger_fetch=<?php echo json_encode($trigger);?>;
-  let student_fetch=<?php echo json_encode($studentName);?>;
-  let email_fetch=<?php echo json_encode($email);?>;
-  
-  function run(){
-  let otp_generate=Math.floor(1000+Math.random()*9000);
-  console.log(otp_generate);
-  let msg=`<h1>Hello ${student_fetch}</h1><br><p>Your OTP is:${otp_generate}`
-  Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "infinity2k24psgtech@gmail.com",
-    Password : "1158C7EAE702F976E5D954AA2F464E912750",
-    To : `${email_fetch}`,
-    From : "infinity2k24psgtech@gmail.com",
-    Subject : "OTP Verification",
-    Body : `${msg}`
-}).then(
-  function(message){
-    if(message=="OK"){
-      swal({
-            text:'OTP Sent Successfully.Check SPAM',
-            title:'Success',
-            icon:'success',
-            buttons:{
-              confirm:'Ok'
+  var trigger_fetch=<?php echo json_encode($trigger);?>;
+  var student_name=<?php echo json_encode($studentName);?>;
+  var student_id_fetch=<?php echo json_encode($student_id_fin);?>;
+  var email_fetch=<?php echo json_encode($email)?>
+
+  function run() {
+    let msg = `<h1>Hello ${student_name}</h1><br><p>Your Student ID is:${student_id_fetch}`;
+    
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "infinity2k24psgtech@gmail.com",
+      Password: "1158C7EAE702F976E5D954AA2F464E912750",
+      To: `${email_fetch}`,
+      From: "infinity2k24psgtech@gmail.com",
+      Subject: "Student ID",
+      Body: `${msg}`
+    }).then(
+      function (message) {
+        if (message === "OK") {
+          swal({
+            text: 'Student ID Sent Successfully ' + `${student_id_fetch}`,
+            title: 'Success',
+            icon: 'success',
+            buttons: {
+              confirm: 'Ok'
             },
-            dangerMode:true,
-          }).then(function(){
-              localStorage.setItem('otp_send',JSON.stringify(otp_generate))
-              window.location.href="otp_verification.php";
-            }
-          )
-      }
-      else{
-        swal({
-            text:'OTP Not Sent.An Error occured',
-            title:'Errror',
-            icon:'error',
-            buttons:{
-                confirm:'Ok'
+            dangerMode: true,
+          }).then(function () {
+            window.location.href = "onspot_events.php";
+          });
+        } else {
+          swal({
+            text: 'Student ID Not Sent. An Error occurred',
+            title: 'Error',
+            icon: 'error',
+            buttons: {
+              confirm: 'Ok'
             },
-            dangerMode:true,
-        })
+            dangerMode: true,
+          });
+        }
       }
+    );
   }
-  );
-}
- if(trigger_fetch==1){
-    run()
+
+  if (trigger_fetch === 1) {
+    run();
   }
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </html>

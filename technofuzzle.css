@@ -1,0 +1,97 @@
+body {
+    background-image: url('photos/event_backgrounds/technofuzzle.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    height: 100vh;
+}
+
+.full-container {
+    width: 500px; /* Use max-width instead of fixed width */
+    height: 70px; /* Allow height to adjust automatically */
+    background: transparent;
+    backdrop-filter: blur(40px);    
+}
+.cont-us{
+    border-bottom: 2px solid white;
+}
+.info-box {
+    width: 100%; /* Use percentage for relative width */
+}
+.descp{
+    background-color: aliceblue;
+    font-family: ubuntubold;
+    font-size: 1rem !important;
+    text-align: center;
+    padding: 10px !important;
+    font-weight: 100;
+}
+.card{
+    height: 300px !important;
+    width: 200px !important;
+    background-color: #212529 !important;
+    box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.548);
+    padding-left:20px !important;
+}
+.register{
+    height: 200px !important;
+    width: 100% !important;
+    background: transparent !important;
+    backdrop-filter: blur(50px) !important;
+}
+.stu-id{
+    width: 90% !important;
+}
+.bod-right{
+    border-right: 2px solid white;
+}
+.contact-us{
+    height: 150px !important;
+    width: 100% !important;
+}
+.click-section {
+    max-width: 500px !important; /* Use percentage for relative width */
+    height: auto !important;
+    background-color: rgb(19, 111, 231);
+}
+.contact{
+    height: 160px !important;
+    width: 100% !important;
+    background-color: #212529 !important;
+}
+.cont-quote{
+    font-size: 25px;
+}
+.cont-quote1{
+    font-size: 20px;
+}
+.cont-quote2{
+    font-size: 15px;
+}
+@media screen and (min-width:220px) and (max-width:425px){
+    .psg{
+        font-size: 10px !important;
+    }
+    .contact{
+        height: 200px !important;
+        width: 100% !important;
+        background-color: #212529 !important;
+    }
+    .reg-row{
+        margin-right: 70px !important;
+    }
+    .stu-id{
+        width: 115% !important;
+    }
+    .cont-quote{
+        margin-left: 23px !important;
+    }
+}
+@font-face {
+    font-family: ubuntu;
+    src: url('fonts/Ubuntu-Light.ttf');
+}
+@font-face {
+    font-family: ubuntubold;
+    src: url('fonts/Ubuntu-BoldItalic.ttf');
+}

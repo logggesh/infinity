@@ -63,7 +63,7 @@ function run(){
     let roll_fetch=<?php echo json_encode($roll_no);?>;
     let name_fetch=<?php echo json_encode($name);?>;
     let mail_fetch=<?php echo json_encode($mail);?>;
-    let final_stuid=roll_fetch+rand_prod
+    let final_stuid=roll_fetch+"_"+rand_prod
     let otp_tot=digit1+digit2+digit3+digit4;
     let otp_int_conv=parseInt(otp_tot);
     let otp_rec=JSON.parse(received_otp);
@@ -97,13 +97,26 @@ function run(){
             dangerMode: true,
         }).then((willClose)=>{
             if(willClose){
-                swal.close
+                window.location.href="loading.php";       
             }
         });
     });
             },
             error:function(response){
-                
+                swal({
+            text:"Verification Failed",
+            title:"Error",
+            icon:"error",
+            Buttons:{
+                confirm:"Ok"
+            },
+            dangermode:true,
+        }).then((willClose)=>{
+            if(willClose){
+                window.location.href="index.php"
+            }
+        }
+        )
             }
         })
     }
@@ -124,6 +137,9 @@ function run(){
         )
     }
 }
+$(document).ready(function(){
+
+})
 </script>
 
 </html>

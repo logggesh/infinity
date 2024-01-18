@@ -1,3 +1,21 @@
+<?php
+include('con.php');
+session_start();
+ if(isset($_GET['logout'])){
+    unset($_SESSION['studentName']);
+    unset($_SESSION['userid']);
+    unset($_SESSION['rollnum']);
+    session_destroy();
+    echo '<script>
+        swal({
+            title:"warning",
+            text:"Logged Out",
+        });
+    </script>';
+    header("Location: homepage.php");
+    exit;
+ }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +26,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-black">
+<nav class="navbar navbar-expand-lg bg-body-black">
     <div class="container-fluid">
         <a class="navbar-brand text-white" href="#">
             <img src="logo/logo.png" alt="Bootstrap" class="ms-3" width="30" height="30">
@@ -20,13 +38,13 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">ABOUT US</a>
+                    <a class="nav-link text-white" href="#abt_us_sec">ABOUT US</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">SPONSORS</a>
+                    <a class="nav-link text-white" href="homepage.php/#sponsers_sec">SPONSORS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">EVENTS</a>
+                    <a class="nav-link text-white" href="events.php">EVENTS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">SCHEDULE</a>
@@ -34,13 +52,17 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">GALLERY</a>
                 </li>
-                <li class="nav-item">
-                    <a class="btn btn-success" href="#">Login</a>
+                <li>
+                <?php
+                    if(isset($_SESSION['userid'])){
+                        echo '<span class="nav-link text-white">Hello, '.$_SESSION['studentName'].'('.$_SESSION['rollnum'].')'.'</span></li>';
+                        echo '<a class=" btn btn-danger" href="homepage.php?logout">Log out</a>';
+                    }
+                    else{
+                       echo '<a class="btn btn-success" href="login.php">Login In</a>';
+                    }
+                ?>
                 </li>
-                <li class="nav-item">
-                    <a class="btn btn-danger" href="#">Sign Up</a>
-                </li>
-            </ul>
         </div>
     </div>
 </nav>
@@ -59,7 +81,7 @@
                             <img src="photos/Event_Logos/tech_rush.png" alt="">
                         </div>
                         <h4 class="text-center text-white mt-4">TECH RUSH</h4>
-                        <p class="text-white text-center mt-3">Know more</p>
+                        <p class="text-white text-center mt-3"><a href="techrush.php">Know more</a></p>
                     </div>
                 </div>
             </div>
@@ -73,7 +95,7 @@
                             <img src="photos/Event_Logos/incognito.png" alt="">
                         </div>
                         <h4 class="text-center text-white mt-4">INCOGNITO</h4>
-                        <p class="text-white text-center mt-3">Know more</p>
+                        <p class="text-white text-center mt-3"><a href="incognito.php">Know more</a></p>
                     </div>
                 </div>
             </div>
@@ -87,7 +109,7 @@
                             <img src="photos/Event_Logos/technofuzzle.png" alt="">
                         </div>
                         <h4 class="text-center text-white mt-4">TECHNO FUZZLE</h4>
-                        <p class="text-white text-center mt-3">Know more</p>
+                        <p class="text-white text-center mt-3"><a href="technofuzzle.php">Know more</a></p>
                     </div>
                 </div>
             </div>
@@ -101,7 +123,7 @@
                             <img src="photos/Event_Logos/ideathrone.png" alt="">
                         </div>
                         <h4 class="text-center text-white mt-4">IDEATHRONE</h4>
-                        <p class="text-white text-center mt-3">Know more</p>
+                        <p class="text-white text-center mt-3"><a href="ideathrone.php">Know more</a></p>
                     </div>
                 </div>
             </div>
@@ -117,7 +139,7 @@
                             <img src="photos/Event_Logos/gamoholix.png" alt="">
                         </div>
                         <h4 class="text-center text-white mt-4">GAMOHOLIX</h4>
-                        <p class="text-white text-center mt-3">Know more</p>
+                        <p class="text-white text-center mt-3"><a href="gamoholix.php">Know more</a></p>
                     </div>
                 </div>
             </div>
@@ -132,7 +154,7 @@
                             <img src="photos/Event_Logos/graphiculture.png" alt="">
                         </div>
                         <h4 class="text-center text-white mt-4">GRAPHICULTURE</h4>
-                        <p class="text-white text-center mt-3">Know more</p>
+                        <p class="text-white text-center mt-3"><a href="graphiculture.php">Know more</a></p>
                     </div>
                 </div>
             </div>
@@ -147,7 +169,7 @@
                             <img src="photos/Event_Logos/mindmuse.png" alt="">
                         </div>
                         <h4 class="text-center text-white mt-4">MIND MUSE</h4>
-                        <p class="text-white text-center mt-3">Know more</p>
+                        <p class="text-white text-center mt-3"><a href="mindmuse.php">Know more</a></p>
                     </div>
                 </div>
             </div>
@@ -166,7 +188,7 @@
                             <img src="photos/Event_Logos/prozone.png" alt="">
                         </div>
                         <h4 class="text-center text-white mt-4">PROZONE</h4>
-                        <p class="text-white text-center mt-3">Know more</p>
+                        <p class="text-white text-center mt-3"><a href="prozone.php">Know more</a></p>
                     </div>
                 </div>
             </div>
@@ -174,25 +196,6 @@
             </div>
         </div>
     </div>
-    <script>
-    document.addEventListener("DOMContentLoaded",function(){
-        let cards=document.querySelectorAll('.tech-back,.incognito-back,.technofuzzle-back,.ideathrone-back,.gamoholix-back,.graphiculture-back,.mindmuse-back,.prozone-back');
-        console.log(cards);
-        cards.forEach(card=>{
-            card.addEventListener("mouseover",function(){
-                this.classList.add('card-hovered');
-                this.style.animation = 'none';
-            });
-            card.addEventListener("mouseout",function(){
-                this.classList.remove('card-hovered');
-                setTimeout(() => {
-                this.style.animation = 'colorchange 2s ease';
-            }, 10);
-            });
-        });
-    })
-</script>
 </body>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </html>

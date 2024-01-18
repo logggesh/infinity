@@ -1,6 +1,5 @@
 *{
-    padding: 0;
-    margin: 0;
+    margin: 0 !important;  
 }
 nav{
     background-color: black;
@@ -11,7 +10,7 @@ nav{
 .abt-us-cont-disp{
     opacity: 1;
     height: 500px !important;
-    width: 1200px !important;
+    width: 1250px !important;
     background-color: black;
     border-radius: 15px !important;
     animation: back-drop 0.9s ease-in;
@@ -43,6 +42,11 @@ nav{
     margin-top: 50px !important;
 }
 
+.container-fluid,
+.row {
+    padding: 0;
+}
+
 @media screen and (min-width: 200px) and (max-width: 439px) {
     .psg{
         font-size: 10px !important;
@@ -65,6 +69,9 @@ nav{
         display: flex !important;
         height: 300px !important;
         width: 300px !important;
+    }
+    *{
+        margin: 0 !important;
     }
 }
 @media screen and (min-width: 445px) and (max-width: 988px) {
@@ -90,6 +97,9 @@ nav{
         color: white;
         padding: 20px 20px;
     }
+    *{
+        margin: 0 !important;
+    }
 }
 @keyframes transition-content {
     0%{
@@ -106,4 +116,8 @@ nav{
     100%{
         opacity: 1;
     }
+}
+@font-face {
+    font-family: ubuntu;
+    src: url('fonts/Ubuntu-Light.ttf');
 }

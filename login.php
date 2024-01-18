@@ -26,10 +26,10 @@
                                 <p class="login-txt">LOGIN</p>
                             </div>
                             <div class="mt-3 d-flex justify-content-center">
-                                <input class="form-control input-box" type="text" name="email" placeholder="EMAIL-ID" aria-label="default input example">
+                                <input class="form-control input-box" type="text" name="email" placeholder="EMAIL-ID" aria-label="default input example" required>
                             </div>
                             <div class="col-lg-12 mt-5 d-flex justify-content-center">
-                                <input class="form-control input-box" type="text" name="password" placeholder="PASSWORD" aria-label="default input example">
+                                <input class="form-control input-box" type="text" name="password" placeholder="PASSWORD" aria-label="default input example" required>
                             </div>
                             <div class="col-lg-12 d-flex justify-content-center mt-5">
                                 <button class="login-button">Login</button>
@@ -82,11 +82,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             dangermode:true,
         }).then((willClose)=>{
             if(willClose){
-                swal.close()
-
+                swal.close();
+                window.location.href = 'homepage.php';
             }
         }
         )</script>";
+        session_start();
+        $_SESSION['userid'] = $user['student_id'];
+        $_SESSION['studentName']=$user['studentName'];
+        $_SESSION['rollnum']=$user['rollNumber'];
     } else {
         echo "<script>swal({
             text:'Not Logged In',
